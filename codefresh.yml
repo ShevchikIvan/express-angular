@@ -6,4 +6,4 @@ steps:
     description: codefresh example
     image-name: codefreshexamples/expressangular
     dockerfile: Dockerfile
-    tag: latest
+    tag: echo $CF_REVISION | cut -c1-8
