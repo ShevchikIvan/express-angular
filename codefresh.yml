@@ -1,9 +1,17 @@
 version: '1.0'
 
-steps:
-  build-prj:
+#steps:
+#  build-prj:
+#    type: build
+#    description: codefresh example
+#    image-name: codefreshexamples/expressangular
+#    dockerfile: Dockerfile
+#    tag: echo latest
+
+  build-project:
     type: build
+    working-directory: $initial-clone
     description: codefresh example
-    image-name: codefreshexamples/expressangular
+    image-name: ncodefresh/express-angular
     dockerfile: Dockerfile
-    tag: echo latest
+    tag: $CF_SHORT_REVISION
