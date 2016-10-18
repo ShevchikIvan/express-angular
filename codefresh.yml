@@ -6,7 +6,7 @@ steps:
     description: codefresh example
     image-name: codefreshexamples/expressangular
     dockerfile: Dockerfile
-    tag: $CF_SHORT_REVISION
+    tag: $CF_REVISION
 #steps:
  # build-project:
   #  type: build
@@ -15,10 +15,7 @@ steps:
     #image-name: codefreshexamples/expressangular
     #dockerfile: Dockerfile
     #tag: $CF_SHORT_REVISION
-
-  generate-tag:
-    image: node:latest
-    working-directory: ${{initial-clone}}
-    commands:
-        - echo short ${{CF_SHORT_REVISION}}
-        - echo long ${{CF_REVISION}}
+  push-to-dockerhub:
+    type: push
+    candidate: ${{build-project}}
+    tag: ${{CF_BRANCH}}
