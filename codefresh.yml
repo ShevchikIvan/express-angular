@@ -7,7 +7,7 @@ version: '1.0'
 #    image-name: codefreshexamples/expressangular
 #    dockerfile: Dockerfile
 #    tag: echo latest
-
+steps:
   build-project:
     type: build
     working-directory: $initial-clone
