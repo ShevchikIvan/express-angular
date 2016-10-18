@@ -6,7 +6,7 @@ steps:
     description: codefresh example
     image-name: codefreshexamples/expressangular
     dockerfile: Dockerfile
-    tag: $CF_REVISION
+    tag: ${{CF_REVISION}}
 #steps:
  # build-project:
   #  type: build
@@ -18,4 +18,4 @@ steps:
   push-to-dockerhub:
     type: push
     candidate: ${{build-prj}}
-    tag: ${{CF_SHORT_REVISION}}
+    tag: ${{CF_REVISION}}
