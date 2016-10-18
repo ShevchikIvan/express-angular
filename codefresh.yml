@@ -18,4 +18,4 @@ steps:
   push-to-dockerhub:
     type: push
     candidate: ${{build-prj}}
-    tag: ${{CF_REVISION}}
+    tag: ${{CF_SHORT_REVISION}}
