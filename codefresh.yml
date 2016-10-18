@@ -12,6 +12,6 @@ steps:
     type: build
     working-directory: $initial-clone
     description: codefresh example
-    image-name: ncodefresh/express-angular
+    image-name: codefreshexamples/expressangular
     dockerfile: Dockerfile
     tag: $CF_SHORT_REVISION
