@@ -17,5 +17,5 @@ steps:
     #tag: $CF_SHORT_REVISION
   push-to-dockerhub:
     type: push
-    candidate: ${{build-project}}
-    tag: ${{CF_BRANCH}}
+    candidate: ${{build-зко}}
+    tag: ${{CF_SHORT_REVICSION}}
