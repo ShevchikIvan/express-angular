@@ -4,7 +4,7 @@ steps:
   build-prj:
     type: build
     description: codefresh example
-    image-name: codefreshexamples/expressangular
+    image-name: shevchikivan/expressangular
     dockerfile: Dockerfile
     tag: ${{CF_REVISION}}
 #steps:
