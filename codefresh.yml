@@ -15,3 +15,10 @@ steps:
     #image-name: codefreshexamples/expressangular
     #dockerfile: Dockerfile
     #tag: $CF_SHORT_REVISION
+
+  generate-tag:
+    image: node:latest
+    working-directory: ${{initial-clone}}
+    commands:
+        - echo short ${{CF_SHORT_REVISION}}
+        - echo long ${{CF_REVISION}}
